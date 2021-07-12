@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  background: #d2e9fb url(https://s2.hdslb.com/bfs/static/blive/blfe-dynamic-web/static/img/background.bc725153.png) top/contain no-repeat;
+  min-width: 100vw;
+  min-height: 100vh;
+}

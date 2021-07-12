@@ -1,0 +1,58 @@
+.international-header {
+    min-width: 300px;
+    min-height: 66px;
+    background: white;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
+}
+
+.my-header {
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    min-height: 66px;
+
+}
+.my-ico {
+    flex: 1;
+    display: flex;
+}
+.my-ico > img {
+    width: 66px;
+    height: 66px;
+}
+
+.my-nav {
+    flex: 6;
+    display: flex;
+}
+
+.my-others { 
+    flex: 3;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 44px;
+
+}
+.my-others > div {
+    flex: 1;
+    display: inline-block;
+}
+
+.my-others > div:nth-child(1) {
+    align-self: flex-start;
+}
+.my-others > div:nth-child(2) {
+    align-self: center;
+}
+.my-others > div:nth-child(3) {
+    align-self: flex-end;
+}
+.my-others > div:nth-child(4) {
+    align-self: flex-end;
+}
+.my-others > div:nth-child(5) {
+    align-self: center;
+}
+.my-others > div:nth-child(6) {
+    align-self: flex-start;
+}
