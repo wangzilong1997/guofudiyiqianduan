@@ -3,6 +3,8 @@
     min-height: 66px;
     background: white;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
+    z-index: 1000;
+    position: relative;
 }
 
 .my-header {

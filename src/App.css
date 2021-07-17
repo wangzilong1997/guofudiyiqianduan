@@ -1,0 +1,14 @@
+.app{
+    background: #d2e9fb url(https://s2.hdslb.com/bfs/static/blive/blfe-dynamic-web/static/img/background.bc725153.png) top/contain no-repeat;
+    min-height: 55vw;
+}
+.fix_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(//s2.hdslb.com/bfs/static/blive/blfe-dynamic-web/static/img/background.bc725153.png);
+    background-size: cover;
+    background-position: center;
+}

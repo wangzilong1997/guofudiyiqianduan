@@ -3,7 +3,9 @@
   padding: 0;
 }
 #root {
-  background: #d2e9fb url(https://s2.hdslb.com/bfs/static/blive/blfe-dynamic-web/static/img/background.bc725153.png) top/contain no-repeat;
-  min-width: 55vw;
-  min-height: 150vh;
+  font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+  position: relative;
+  color: #222;
+  font-size: 14px;
+  background-color: #d2e9fb;
 }

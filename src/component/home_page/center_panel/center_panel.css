@@ -1,0 +1,8 @@
+.Center_panel{
+    flex: 8;
+    display: flex;
+    margin: 0 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}

@@ -1,0 +1,22 @@
+.card_container{
+    width:19rem;
+    margin: .1rem auto;
+    border:.1rem solid #cecece;
+    border-radius: .5rem;
+    background-color: bisque;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.card_img{
+    margin: 1rem 0;
+    text-align: center;
+}
+.card_title{
+    text-align: center;
+    height: 1rem;
+}
+.card_aurthorandtime {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2rem 1.2rem;
+}
