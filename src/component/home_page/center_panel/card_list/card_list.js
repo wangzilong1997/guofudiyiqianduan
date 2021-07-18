@@ -17,7 +17,7 @@ class Card_list extends React.Component {
     render(){
         return(
             <div className="card_container">
-                
+                <div className="card_id">{this.props.data.pentaid}</div>
                 <div className="card_img"> 
                     <a href={this.props.data.url} target="_blank" rel="noopener noreferrer">
                         <img src={this.props.data.imgurl} alt="图片路径" width="290px" height="200px"/>

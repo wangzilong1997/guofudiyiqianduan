@@ -6,6 +6,16 @@
     background-color: bisque;
     position: relative;
     margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+.card_id{
+    position: absolute;
+    background-color: bisque;
+    width: 50px;
+    top: 19px;
+    left: -6px;
+    transform: rotate(-45deg);
+    text-align: center;
 }
 .card_img{
     margin: 1rem 0;
