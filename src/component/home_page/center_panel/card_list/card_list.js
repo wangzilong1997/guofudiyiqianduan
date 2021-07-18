@@ -24,18 +24,18 @@ class Card_list extends React.Component {
                     </a>
                     
                 </div>
-                <div className="card_title">
+                <div className="card_title Singlelineellipsis">
                     {
                         this.props.data.title
                     }
                 </div>
-                <div className="card_aurthorandtime">
-                    <div>
+                <div className="card_aurthorandtime ">
+                    <div className='card_aurthorandtime_author Singlelineellipsis'>
                         {
                             this.props.data.author
                         }
                     </div>
-                    <div>
+                    <div className='card_aurthorandtime_time Singlelineellipsis'>
                         {
                             this.state.time
                         }

@@ -18,5 +18,12 @@
 .card_aurthorandtime {
     display: flex;
     justify-content: space-between;
-    margin: 1.2rem 1.2rem;
+    margin: .9rem .8rem;
+}
+.card_aurthorandtime_author {
+    min-width: 136px;
+}
+
+.card_aurthorandtime_time {
+    min-width: 136px;
 }

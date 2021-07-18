@@ -12,3 +12,8 @@
     background-size: cover;
     background-position: center;
 }
+.Singlelineellipsis {
+    overflow: hidden;
+    text-overflow:ellipsis; 
+    white-space: nowrap;
+}
