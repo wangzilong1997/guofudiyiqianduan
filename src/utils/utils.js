@@ -37,3 +37,17 @@ export function transformtime(date){
     return y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + second
 }
 
+// eslint-disable-next-line
+export function debounce(fn, wait = 1000){
+    console.log('f防抖函数执行')
+    let timer = null
+    return function debounce(...args) {
+        timer && clearTimeout(timer)
+
+        timer = setTimeout(()=>{
+            fn(...args)
+            timer = null
+        },wait)
+    }
+}
+
