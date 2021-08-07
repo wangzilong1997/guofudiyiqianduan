@@ -37,3 +37,10 @@
 .card_aurthorandtime_time {
     min-width: 136px;
 }
+.card_views {
+    position: absolute;
+    margin-left: calc(100% - 20px);
+    margin-top: calc(100% - 110px);
+    color: #cecece;
+    opacity: .7;
+}
