@@ -1,6 +1,8 @@
 import React from 'react';
 import './card_list.css';
 import { transformtime } from '../../../../utils/utils';
+import axios from 'axios';
+import qs from 'qs';
 class Card_list extends React.Component {
     
     constructor(props){
@@ -14,9 +16,15 @@ class Card_list extends React.Component {
             time: transformtime(new Date(this.props.data.time))
         })
     }
+    cardClick = () => {
+        axios.post('/api/hyrelation',qs.stringify({ pentaid: this.props.data.pentaid }))
+            .then((res)=>{
+                console.log('ressss',res)
+            })
+    }
     render(){
         return(
-            <div className="card_container">
+            <div className="card_container" onClick={this.cardClick}>
                 <div className="card_id">{this.props.data.pentaid}</div>
                 <div className="card_img"> 
                     <a href={this.props.data.url} target="_blank" rel="noopener noreferrer">
