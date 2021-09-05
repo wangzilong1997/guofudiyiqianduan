@@ -14,7 +14,6 @@ class Center_panel extends React.Component {
             updateLength:null
         }
     }
-
     componentDidMount(){
         axios.get('/api/huyapenta/1')
             .then((res)=>{

@@ -1,5 +1,5 @@
 import React from "react";
-import './index.css';
+import styles from './index.less';
 
 import LeftPanel from "./left_panel/left_panel";
 import CenterPanel from "./center_panel/center_panel";
@@ -9,8 +9,8 @@ class Homepage extends React.Component {
         return (
             <div>
                 <div className='fix_bg'></div> 
-                <div className='home_container'>
-                    <div className='home-content'>
+                <div className={styles.home_container}>
+                    <div className={styles.home_content}>
                         <LeftPanel></LeftPanel>
                         <CenterPanel></CenterPanel>
                         
