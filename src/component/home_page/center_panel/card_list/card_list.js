@@ -4,6 +4,9 @@ import { transformtime } from '../../../../utils/utils';
 import axios from 'axios';
 import qs from 'qs';
 
+import kiss from '../../../../asset/card/kiss.svg'
+import amazed from '../../../../asset/card/amazed.svg'
+import scared from '../../../../asset/card/scared.svg'
 // import CardItem from '../components/CardItem/index.tsx';
 class Card_list extends React.Component {
     
@@ -100,9 +103,15 @@ class Card_list extends React.Component {
                             </div>
                         </div>
                         <div className="card_bottom">
-                            <button className="card_bottom_item" onClick={this.likeClick}>喜欢{this.state.likes || 0}</button>
-                            <button className="card_bottom_item" onClick={this.unlikeClick}>不喜欢{this.state.unlikes || 0}</button>
-                            <button className="card_bottom_item" onClick={this.cardClick}>浏览量{this.state.views || 0}</button>
+                            <button className="card_bottom_item" onClick={this.likeClick}>
+                                <img src={kiss} width='20px' height="20px" alt="喜欢"></img>    喜欢{this.state.likes || 0}
+                            </button>
+                            <button className="card_bottom_item" onClick={this.unlikeClick}>
+                                <img src={scared} width='20px' height="20px" alt="不喜欢"></img> 不喜欢{this.state.unlikes || 0}
+                            </button>
+                            <button className="card_bottom_item" onClick={this.cardClick}>
+                                <img src={amazed} width='20px' height="20px" alt="浏览量"></img> 浏览量{this.state.views || 0}
+                            </button>
                         </div>
                     </div>
                     

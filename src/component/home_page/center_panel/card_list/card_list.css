@@ -17,7 +17,9 @@
 .card_container:hover{
     width: 20rem;
     height: 20rem;
-
+}
+.card_container:hover .card_bottom_item{
+    display: block !important;
 }
 .card_id{
     position: absolute;
@@ -41,6 +43,7 @@
     display: flex;
     justify-content: space-between;
     margin: .9rem .8rem;
+    margin-bottom: .2rem;
 }
 .card_aurthorandtime_author {
     min-width: 136px;
@@ -62,6 +65,7 @@
     flex-direction: row;
 }
 .card_bottom_item{
+    display: none;
     margin-left: 1rem;
     border: none;
     background-color: transparent;
