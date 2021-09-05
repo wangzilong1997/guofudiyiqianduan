@@ -16,7 +16,7 @@ class Center_panel extends React.Component {
     }
 
     componentDidMount(){
-        axios.get('/huyapenta/1')
+        axios.get('/api/huyapenta/1')
             .then((res)=>{
                 console.log('ressss',res)
                 this.setState({
@@ -27,7 +27,7 @@ class Center_panel extends React.Component {
             window.addEventListener('scroll', debounce(this.scrollHandle,200))
     }
     getdata = (e) => {
-        axios.get(`/huyapenta/${e}`)
+        axios.get(`/api/huyapenta/${e}`)
             .then((res)=>{
                 console.log('ressss',res)
                 this.setState({
