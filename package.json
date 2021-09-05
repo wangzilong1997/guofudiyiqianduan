@@ -164,5 +164,8 @@
         }
       ]
     ]
+  },
+  "devDependencies": {
+    "ts-node": "^10.2.1"
   }
 }
