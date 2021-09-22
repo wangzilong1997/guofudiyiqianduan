@@ -1,4 +1,9 @@
 // eslint-disable-next-line
+/**
+ * 深拷贝函数
+ * @param {*} obj 
+ * @returns 
+ */
 export function deepclone(obj = {}){
     if(typeof obj !== 'object' || obj == null){
         return obj
@@ -22,6 +27,9 @@ export function deepclone(obj = {}){
 
 }
 // eslint-disable-next-line
+/** 转化为所需的时间格式
+ * @param data 
+ */
 export function transformtime(date){
     var y = date.getFullYear()
     var m = date.getMonth() + 1
@@ -38,6 +46,12 @@ export function transformtime(date){
 }
 
 // eslint-disable-next-line
+/**
+ * 防抖函数
+ * @param {*} fn 
+ * @param {*} wait 
+ * @returns 
+ */
 export function debounce(fn, wait = 1000){
     console.log('f防抖函数执行')
     let timer = null

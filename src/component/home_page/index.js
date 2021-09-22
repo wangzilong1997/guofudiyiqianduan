@@ -13,7 +13,6 @@ class Homepage extends React.Component {
                     <div className={styles.home_content}>
                         <LeftPanel></LeftPanel>
                         <CenterPanel></CenterPanel>
-                        
                     </div>
                 </div>    
             </div>    
