@@ -1,9 +1,8 @@
 import './App.css'
-import Header from './component/header/index'
-import Homepage from './component/home_page'
+
 
 import Login from './component/login/index'
-
+import Layout from './layout/index'
 import React from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
@@ -13,7 +12,7 @@ function App() {
     <>
     <div className='app'>
       <BrowserRouter>
-        <ProctectedRoute exact path="/" component={Homepage} />
+        <ProctectedRoute exact path="/" component={Layout} />
         {/* <Route exact path='/' >
           <Header></Header>
           <Homepage></Homepage>
