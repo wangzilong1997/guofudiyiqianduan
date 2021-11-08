@@ -24,9 +24,9 @@ class Card_list extends React.Component {
             time: transformtime(new Date(this.props.data.time))
         })
         this.setState({
-            views:this.props.data.views || 0,
-            likes:this.props.data.likes || 0,
-            unlikes:this.props.data.unlikes || 0,
+            views:+this.props.data.views || 0,
+            likes:+this.props.data.likes || 0,
+            unlikes:+this.props.data.unlikes || 0,
         })
     }
     // 浏览
