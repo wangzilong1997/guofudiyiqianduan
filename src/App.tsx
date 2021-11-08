@@ -7,19 +7,19 @@ import Login from './component/login/index'
 import React from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
+import ProctectedRoute from './utils/proctected.router'
 function App() {
   return (
     <>
     <div className='app'>
       <BrowserRouter>
-        <Route path='/index' >
+        <ProctectedRoute exact path="/" component={Homepage} />
+        {/* <Route exact path='/' >
           <Header></Header>
           <Homepage></Homepage>
-        </Route>
-        <Route  path='/login' >
-          <Login />
-          {/* <Header></Header> */}
-        </Route>
+        </Route> */}
+        <Route exact path='/login' component={Login} />
+          
       </BrowserRouter>
     </div>
     </>

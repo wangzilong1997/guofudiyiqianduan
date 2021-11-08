@@ -1,11 +1,25 @@
 import React from 'react'
 import { Form, Input, Button, Checkbox } from 'antd';
-
+import axios from 'axios';
+import qs from 'qs';
 import './index.css'
+import auth from '../../auth/auth'
 
-const Login:React.FC<any> = (props):any => {
+const Login = (props) => {
   const onFinish = (values: any) => {
     console.log('Success:', values);
+    axios.post('/users/api/user/login',qs.stringify({ name: values.username,password:values.password}))
+            .then((res:any)=>{
+                console.log('ressss',res)
+                if(res.data.success){
+                  console.log(props)
+                  auth.login(()=>{
+                    console.log('登陆成功进行跳转')
+                    props.history.push('/')
+                  })
+                }
+            })
+
   };
 
   const onFinishFailed = (errorInfo: any) => {

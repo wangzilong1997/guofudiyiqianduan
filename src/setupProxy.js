@@ -7,4 +7,9 @@ module.exports = function(app) {
     // target:'http://82.156.183.85/',
     changeOrigin: true,
   }))
+  app.use('/users', createProxyMiddleware({
+    target: 'http://localhost/',
+    // target:'http://82.156.183.85/',
+    changeOrigin: true,
+  }))
 }
