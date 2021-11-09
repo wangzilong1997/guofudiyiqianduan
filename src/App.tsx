@@ -12,6 +12,8 @@ function App() {
     <>
     <div className='app'>
       <HashRouter>
+        <ProctectedRoute exact path="/hylist" component={Layout} />
+        <ProctectedRoute exact path="/dylist" component={Layout} />
         <ProctectedRoute exact path="/" component={Layout} />
         {/* <Route exact path='/' >
           <Header></Header>

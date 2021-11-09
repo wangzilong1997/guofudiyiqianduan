@@ -5,7 +5,7 @@ import Homepage from '../component/home_page'
 const Layout = (props) => {
   return <>
           <Header />
-          <Homepage />
+          <Homepage props={props}/>
          </>
 }
 export default Layout
