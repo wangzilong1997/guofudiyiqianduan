@@ -6,6 +6,8 @@ import Layout from './layout/index'
 import React from 'react'
 import {HashRouter, Route, Switch} from 'react-router-dom'
 
+import DouyuPages from './pages/douyupages'
+
 import ProctectedRoute from './utils/proctected.router'
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
     <div className='app'>
       <HashRouter>
         <ProctectedRoute exact path="/hylist" component={Layout} />
-        <ProctectedRoute exact path="/dylist" component={Layout} />
+        <ProctectedRoute exact path="/dylist" component={DouyuPages} />
         <ProctectedRoute exact path="/" component={Layout} />
         {/* <Route exact path='/' >
           <Header></Header>

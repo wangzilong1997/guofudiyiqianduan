@@ -1,0 +1,83 @@
+.card{
+    width: 21rem;
+    height: 22rem;
+}
+.card_container{
+    width:19rem;
+    height: 18.5rem;
+    margin: .1rem auto;
+    border:.1rem solid #cecece;
+    border-radius: .5rem;
+    background-color: bisque;
+    position: relative;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+}
+.card_container:hover{
+    width: 20rem;
+    height: 20rem;
+}
+.card_container:hover .card_bottom_item{
+    display: block !important;
+}
+.card_id{
+    position: absolute;
+    background-color: bisque;
+    width: 50px;
+    top: 19px;
+    left: -6px;
+    transform: rotate(-45deg);
+    text-align: center;
+    border-radius: 4px;
+}
+.card_img{
+    margin: 1rem 0;
+    text-align: center;
+}
+.card_title{
+    text-align: center;
+}
+.card_aurthorandtime {
+    display: flex;
+    justify-content: space-between;
+    margin: .9rem .8rem;
+    margin-bottom: .2rem;
+}
+.card_aurthorandtime_author {
+    min-width: 136px;
+}
+
+.card_aurthorandtime_time {
+    min-width: 136px;
+}
+.card_views {
+    position: absolute;
+    margin-left: calc(100% - 20px);
+    margin-top: calc(100% - 110px);
+    color: #cecece;
+    opacity: .7;
+}
+.card_bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.card_bottom_item{
+    display: none;
+    margin-left: 1rem;
+    border: none;
+    background-color: transparent;
+}
+
+.likes{
+    background: linear-gradient(91deg,#f1eefc,#9dc6ff 70%,#a5bcff)
+}
+.unlikes{
+    background: -moz-linear-gradient(top, #000000 0%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(top, #000000 0%,#ffffff 100%);
+    background: -o-linear-gradient(top, #000000 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top, #000000 0%,#ffffff 100%);
+    background: linear-gradient(to bottom, #000000 0%,#ffffff 100%);
+}
