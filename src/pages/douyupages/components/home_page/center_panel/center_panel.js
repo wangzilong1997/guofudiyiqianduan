@@ -15,7 +15,7 @@ class Center_panel extends React.Component {
         }
     }
     componentDidMount(){
-        axios.get('/api/huyapenta/1')
+        axios.get('/api/douyupenta/1')
             .then((res)=>{
                 console.log('ressss',res)
                 this.setState({
@@ -26,7 +26,7 @@ class Center_panel extends React.Component {
             window.addEventListener('scroll', debounce(this.scrollHandle,200))
     }
     getdata = (e) => {
-        axios.get(`/api/huyapenta/${e}`)
+        axios.get(`/api/douyupenta/${e}`)
             .then((res)=>{
                 console.log('ressss',res)
                 this.setState({
@@ -36,7 +36,6 @@ class Center_panel extends React.Component {
             })
     }
     scrollHandle = (e) => {
-        
             var top = e.srcElement.scrollingElement.scrollTop;    // 获取页面滚动高度
             console.log(top)
             let datalength = Math.floor(top/600)
@@ -48,15 +47,12 @@ class Center_panel extends React.Component {
                 console.log('数据是否会更新')
                 this.getdata(datalength)
             }
-            
- 
-       
-        
     }
 
     render (){
         let renderList 
         renderList = this.state.list.map((item,index)=>{
+            item.url = 'https://v.douyu.com/show/' + item.url
             return(
                 <CardList data={item} key={item.pentaid}></CardList>
             )

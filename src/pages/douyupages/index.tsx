@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../../component/header/index'
+import Header from '@/component/header/index'
 import Homepage from './components/home_page'
 
 const DouyuPages = (props) => {
