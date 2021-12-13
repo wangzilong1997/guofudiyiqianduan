@@ -15,7 +15,8 @@ class Center_panel extends React.Component {
     }
   }
   componentDidMount() {
-    axios.get('/penta/huya/1')
+    // penta/common/1/dy/2122
+    axios.get('/penta/common/1/hy/' + window.localStorage.getItem('userid'))
       .then((res) => {
         console.log('ressss', res)
         this.setState({
@@ -26,7 +27,7 @@ class Center_panel extends React.Component {
     window.addEventListener('scroll', debounce(this.scrollHandle, 200))
   }
   getdata = (e) => {
-    axios.get(`/penta/huya/${e}`)
+    axios.get(`/penta/common/${e}/hy/` + window.localStorage.getItem('userid'))
       .then((res) => {
         console.log('ressss', res)
         this.setState({

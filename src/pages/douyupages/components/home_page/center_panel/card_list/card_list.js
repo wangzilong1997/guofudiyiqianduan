@@ -31,7 +31,7 @@ class Card_list extends React.Component {
   }
   // 浏览
   cardClick = () => {
-    axios.post('/penta/douyu/view', qs.stringify({ pentaid: this.props.data.pentaid }))
+    axios.post('/penta/common/view', qs.stringify({ pentaid: this.props.data.pentaid, views: 1, type: 'dy', userid: window.localStorage.getItem('userid') }))
       .then((res) => {
         console.log('ressss', res)
       })
@@ -44,7 +44,7 @@ class Card_list extends React.Component {
   // 喜欢
   // 浏览
   likeClick = () => {
-    axios.post('/penta/douyu/like', qs.stringify({ pentaid: this.props.data.pentaid }))
+    axios.post('/penta/common/like', qs.stringify({ pentaid: this.props.data.pentaid, type: 'dy', userid: window.localStorage.getItem('userid'), likes: 'likes', likesval: 1 }))
       .then((res) => {
         console.log('ressss', res)
       })
@@ -57,7 +57,7 @@ class Card_list extends React.Component {
   // 不喜欢
   // 浏览
   unlikeClick = () => {
-    axios.post('/penta/douyu/unlike', qs.stringify({ pentaid: this.props.data.pentaid }))
+    axios.post('/penta/common/like', qs.stringify({ pentaid: this.props.data.pentaid, type: 'dy', userid: window.localStorage.getItem('userid'), likes: 'likes', likesval: 1 }))
       .then((res) => {
         console.log('ressss', res)
       })

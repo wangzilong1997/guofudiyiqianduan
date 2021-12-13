@@ -18,6 +18,8 @@ const Login = (props) => {
             console.log(props)
             auth.login(() => {
               console.log('登陆成功进行跳转')
+              window.localStorage.setItem('userid', res.data.result.userid)
+              window.localStorage.setItem('username', res.data.result.username)
               props.history.push('/')
             })
           }
