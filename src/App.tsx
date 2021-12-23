@@ -16,7 +16,7 @@ function App() {
         <HashRouter>
           <ProctectedRoute exact path="/hylist" component={Layout} />
           <ProctectedRoute exact path="/dylist" component={DouyuPages} />
-          <ProctectedRoute exact path="/" component={Layout} />
+          <ProctectedRoute exact path="/" component={Login} />
           {/* <Route exact path='/' >
           <Header></Header>
           <Homepage></Homepage>

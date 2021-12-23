@@ -10,21 +10,7 @@ import { Link } from 'react-router-dom';
 const Login = (props) => {
   const onFinish = (values: any) => {
     console.log('Success:', values, props);
-    props.location.pathname === '/login' ?
-      axios.post('/users/api/user/login', qs.stringify({ name: values.username, password: values.password }))
-        .then((res: any) => {
-          console.log('ressss', res)
-          if (res.data.success) {
-            console.log(props)
-            auth.login(() => {
-              console.log('登陆成功进行跳转')
-              window.localStorage.setItem('userid', res.data.result.userid)
-              window.localStorage.setItem('username', res.data.result.username)
-              props.history.push('/')
-            })
-          }
-        })
-      :
+    props.location.pathname === '/register' ?
       axios.post('/users/api/user/register', qs.stringify({ name: values.username, password: values.password }))
         .then((res: any) => {
           console.log('ressss', res)
@@ -36,6 +22,21 @@ const Login = (props) => {
             })
           }
         })
+      :
+      axios.post('/users/api/user/login', qs.stringify({ name: values.username, password: values.password }))
+        .then((res: any) => {
+          console.log('ressss', res)
+          if (res.data.success) {
+            console.log(props)
+            auth.login(() => {
+              console.log('登陆成功进行跳转')
+              window.localStorage.setItem('userid', res.data.result.userid)
+              window.localStorage.setItem('username', res.data.result.username)
+              props.history.push('/hylist')
+            })
+          }
+        })
+
 
   };
 
