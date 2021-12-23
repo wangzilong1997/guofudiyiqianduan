@@ -84,6 +84,11 @@ const Login = (props) => {
         </Link>
       </Form.Item>
     </Form>
+    <div className="hbicp">
+      <a href="https://beian.miit.gov.cn/">
+        冀ICP备2021018062号-1
+      </a>
+    </div>
   </div>)
 
 }
