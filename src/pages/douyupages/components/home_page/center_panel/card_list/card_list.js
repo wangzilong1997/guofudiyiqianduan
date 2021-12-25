@@ -57,7 +57,7 @@ class Card_list extends React.Component {
   // 不喜欢
   // 浏览
   unlikeClick = () => {
-    axios.post('/penta/common/like', qs.stringify({ pentaid: this.props.data.pentaid, type: 'dy', userid: window.localStorage.getItem('userid'), likes: 'likes', likesval: 1 }))
+    axios.post('/penta/common/like', qs.stringify({ pentaid: this.props.data.pentaid, type: 'dy', userid: window.localStorage.getItem('userid'), likes: 'unlikes', likesval: 1 }))
       .then((res) => {
         console.log('ressss', res)
       })
