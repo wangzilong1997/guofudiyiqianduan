@@ -14,8 +14,6 @@ interface IElevator {
 const Elevator: React.FC<IElevator> = (props) => {
 
   const { dataList, curIndex, callBack } = props
-
-  console.log('Elevator', props)
   const [selectid, setSelectid] = useState(curIndex)
 
   const itemClick = (item, index) => {

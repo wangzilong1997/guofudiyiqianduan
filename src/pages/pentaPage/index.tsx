@@ -8,7 +8,7 @@ import styles from './index.less';
 import Elevator from './components/elevator'
 
 import Card from './components/card'
-
+import PentaCard from './components/pentacard'
 import { debounce } from '@/utils/utils'
 
 const elevatorList = [{
@@ -31,7 +31,7 @@ const PentaPage: React.FC<any> = (props) => {
   var maxLength = 0
 
   useEffect(() => {
-    window.addEventListener('scroll', debounce(scrollHandle, 200))
+    window.addEventListener('scroll', scrollHandle)
     axios.get(`/penta/common/1/${type}/` + window.localStorage.getItem('userid'))
       .then((res) => {
         console.log('ressss', res)
@@ -39,7 +39,7 @@ const PentaPage: React.FC<any> = (props) => {
       })
   }, [])
   useEffect(() => {
-    window.addEventListener('scroll', debounce(scrollHandle, 200))
+    window.addEventListener('scroll', scrollHandle)
     axios.get(`/penta/common/1/${type}/` + window.localStorage.getItem('userid'))
       .then((res) => {
         console.log('ressss', res)
@@ -77,7 +77,10 @@ const PentaPage: React.FC<any> = (props) => {
           list.map(item => {
             item.url = type == 'dy' ? 'https://v.douyu.com/show/' : '' + item.url
             return (
-              <Card data={item} key={item.pentaid}></Card>
+              <>
+                {/* <Card data={item} key={item.pentaid}></Card> */}
+                <PentaCard data={item} key={item.pentaid}></PentaCard>
+              </>
             )
           })
         }

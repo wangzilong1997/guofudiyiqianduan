@@ -57,7 +57,6 @@ export function debounce(fn, wait = 1000) {
   let timer = null
   return function debounce(...args) {
     timer && clearTimeout(timer)
-
     timer = setTimeout(() => {
       fn(...args)
       timer = null
