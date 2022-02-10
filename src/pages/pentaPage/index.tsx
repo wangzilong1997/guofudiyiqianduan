@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 
 import Header from '@/component/header/index'
-import Homepage from './components/home_page'
 
 import styles from './index.less';
 
@@ -76,7 +75,7 @@ const PentaPage: React.FC<any> = (props) => {
       <div className={styles.right}>
         {
           list.map(item => {
-            item.url = 'https://v.douyu.com/show/' + item.url
+            item.url = type == 'dy' ? 'https://v.douyu.com/show/' : '' + item.url
             return (
               <Card data={item} key={item.pentaid}></Card>
             )

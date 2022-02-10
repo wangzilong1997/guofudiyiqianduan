@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.less';
+import './index.css';
 import { transformtime } from '@/utils/utils';
 import axios from 'axios';
 import qs from 'qs';
