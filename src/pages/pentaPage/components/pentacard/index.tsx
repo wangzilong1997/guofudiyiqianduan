@@ -8,6 +8,8 @@ import qs from 'qs';
 import kiss from '@/asset/card/kiss.svg'
 import amazed from '@/asset/card/amazed.svg'
 import scared from '@/asset/card/scared.svg'
+import happiness from '@/asset/card/happiness.svg'
+import thief from '@/asset/card/thief.svg'
 
 import { transformtime } from '@/utils/utils';
 
@@ -57,7 +59,8 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
     let data: any;
     let cardType: string;
     let showNum: string | number | null;
-
+    console.log(cardData['i' + type])
+    let likesval = cardData['i' + type] ? 0 : 1
     if (~cardData.url.indexOf('huya')) {
       cardType = 'hy'
     } else {
@@ -72,7 +75,7 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
           type: cardType,
           userid: window.localStorage.getItem('userid'),
           likes: 'likes',
-          likesval: 1
+          likesval: likesval
         }
         break;
       case 'unlike':
@@ -83,7 +86,7 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
           type: cardType,
           userid: window.localStorage.getItem('userid'),
           likes: 'unlikes',
-          likesval: 1
+          likesval: likesval
         }
         break;
       case 'click':
@@ -103,10 +106,14 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
     type && axios
       .post(url, qs.stringify(data))
       .then((res) => {
-        console.log('ressss', res)
+        console.log('ressss', res, likesval)
+
         if (res?.data?.success) {
+
           let data = JSON.parse(JSON.stringify(cardData))
-          data[showNum]++
+          let num = parseInt(data[showNum])
+          likesval == 1 ? num += 1 : num -= 1
+          data['i' + type] = likesval
           if (data.likes || data.unlikes) {
             if (data.likes >= data.unlikes) {
               setMorelike('like')
@@ -114,6 +121,7 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
               setMorelike('unlike')
             }
           }
+          data[showNum] = num
           setCardData(data)
         }
       })
@@ -153,10 +161,10 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
           </s.CardAurthorAndTime>
           <s.CardBottom>
             <s.CardBottomItem onClick={() => cardClick('like')}>
-              <img src={kiss} width='20px' height="20px" alt="喜欢"></img>    喜欢{cardData.likes || 0}
+              <img src={cardData.ilike ? kiss : happiness} width='20px' height="20px" alt="喜欢"></img> 喜欢{cardData.likes || 0}
             </s.CardBottomItem>
             <s.CardBottomItem onClick={() => cardClick('unlike')}>
-              <img src={scared} width='20px' height="20px" alt="不喜欢"></img> 不喜欢{cardData.unlikes || 0}
+              <img src={cardData.iunlike ? thief : scared} width='20px' height="20px" alt="不喜欢"></img> 不喜欢{cardData.unlikes || 0}
             </s.CardBottomItem>
             <s.CardBottomItem onClick={() => cardClick('click')}>
               <img src={amazed} width='20px' height="20px" alt="浏览量"></img> 浏览量{cardData.views || 0}
