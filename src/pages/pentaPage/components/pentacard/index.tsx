@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 import * as s from './styles'
 
@@ -8,7 +8,6 @@ import qs from 'qs';
 import kiss from '@/asset/card/kiss.svg'
 import amazed from '@/asset/card/amazed.svg'
 import scared from '@/asset/card/scared.svg'
-
 
 import { transformtime } from '@/utils/utils';
 
@@ -40,6 +39,7 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
 
   const [moreLike, setMorelike] = useState(null)
 
+
   useEffect(() => {
     if (cardData.likes || cardData.unlikes) {
       if (cardData.likes >= cardData.unlikes) {
@@ -48,7 +48,6 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
         setMorelike('unlike')
       }
     }
-
   }, [])
 
   // 点击事件
