@@ -111,9 +111,10 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
         if (res?.data?.success) {
 
           let data = JSON.parse(JSON.stringify(cardData))
-          let num = parseInt(data[showNum])
+          let num = data[showNum] ? parseInt(data[showNum]) : 0
           likesval == 1 ? num += 1 : num -= 1
           data['i' + type] = likesval
+          data[showNum] = num
           if (data.likes || data.unlikes) {
             if (data.likes >= data.unlikes) {
               setMorelike('like')
@@ -121,7 +122,7 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
               setMorelike('unlike')
             }
           }
-          data[showNum] = num
+
           setCardData(data)
         }
       })
