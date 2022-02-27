@@ -1,3 +1,10 @@
+/*
+ * @Author: 王子龙
+ * @Date: 2022-02-10 10:21:49
+ * @LastEditTime: 2022-02-27 12:54:58
+ * @LastEditors: 王子龙
+ * @Descripttion: 
+ */
 import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios';
 // 真是个好玩意啊
@@ -65,7 +72,7 @@ const PentaPage: React.FC<any> = (props) => {
       <div className={styles.right}>
         {
           list.map(item => {
-            item.url = type == 'dy' ? 'https://v.douyu.com/show/' : '' + item.url
+            item.url = type === 'dy' ? 'https://v.douyu.com/show/' + item.url : '' + item.url
             return (
               <>
                 <PentaCard data={item} key={item.pentaid} >
