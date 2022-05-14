@@ -9,6 +9,8 @@ import React from 'react'
 import './index.css'
 import logo from '../../asset/logo.png'
 
+import { Link } from 'react-router-dom';
+
 class Header extends React.Component {
     
     render () {
@@ -20,14 +22,19 @@ class Header extends React.Component {
                     </div>
                     <div className="my-nav">
                         <div className='my-nav-item'
-                            onClick={this.navItemClick}
+                            onClick={() => this.navItemClick('pentakill')}
                             >
+                            <Link to="/pentakill" style={{ color: 'black' }}>
                             猪妖五杀
+                            </Link>
+                            
                         </div>
                         <div className='my-nav-item'
-                            onClick={this.navItemClick}
+                            onClick={() => this.navItemClick('zhanglive')}
                             >
+                            <Link to="/zhanglive" style={{ color: 'black' }}>
                             小张影院
+                            </Link>
                         </div>
                     </div>
                     <div className="my-others">
@@ -44,6 +51,7 @@ class Header extends React.Component {
     }
     navItemClick(e){
       console.log(e)
+      
     }
 }
 

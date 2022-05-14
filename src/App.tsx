@@ -9,16 +9,18 @@ import { HashRouter, Route } from 'react-router-dom'
 import PentaPage from './pages/pentaPage'
 
 import ProctectedRoute from './utils/proctected.router'
+
+import ZhangLive from './pages/zhangLive'
 function App() {
   return (
     <>
       <div className='app'>
         <HashRouter>
           <ProctectedRoute exact path="/pentakill" component={PentaPage} />
+          <ProctectedRoute exact path="/zhanglive" component={ZhangLive} />
           <ProctectedRoute exact path="/" component={Login} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Login} />
-
         </HashRouter>
       </div>
     </>

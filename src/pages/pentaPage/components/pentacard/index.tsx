@@ -130,7 +130,7 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
   }
   return (
     <>
-      <s.Card key={key}>
+      <s.Card key={key} onClick={() => cardClick('click')}>
         <s.CardContainer primary={moreLike}>
           <s.CardId primary={moreLike}>
             {cardData.pentaid}
