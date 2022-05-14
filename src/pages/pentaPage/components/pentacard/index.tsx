@@ -130,7 +130,7 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
   }
   return (
     <>
-      <s.Card key={key} onClick={() => cardClick('click')}>
+      <s.Card key={key}>
         <s.CardContainer primary={moreLike}>
           <s.CardId primary={moreLike}>
             {cardData.pentaid}
@@ -138,7 +138,7 @@ const PentaCard: React.FC<IPentaCard> = (props) => {
           <s.CardView>
             {cardData.views || 0}
           </s.CardView>
-          <s.CardImg>
+          <s.CardImg onClick={() => cardClick('click')}>
             <a href={cardData.url} target="_blank" rel="noopener noreferrer">
               <img src={cardData.imgurl} alt="图片路径" width="290px" height="200px" />
             </a>
