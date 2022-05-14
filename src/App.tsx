@@ -9,8 +9,10 @@ import { HashRouter, Route } from 'react-router-dom'
 import PentaPage from './pages/pentaPage'
 
 import ProctectedRoute from './utils/proctected.router'
-
+// 宝宝视频页面
 import ZhangLive from './pages/zhangLive'
+
+
 function App() {
   return (
     <>
