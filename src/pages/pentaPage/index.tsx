@@ -72,6 +72,7 @@ const PentaPage: React.FC<any> = (props) => {
       <div className={styles.right}>
         {
           list.map(item => {
+            item = JSON.parse(JSON.stringify(item))
             item.url = type === 'dy' ? 'https://v.douyu.com/show/' + item.url : '' + item.url
             return (
               <>

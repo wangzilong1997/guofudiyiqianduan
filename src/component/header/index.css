@@ -58,3 +58,7 @@
 .my-others > div:nth-child(6) {
     align-self: flex-start;
 }
+.my-nav-item {
+  flex: 1;
+  text-align: center;
+}
